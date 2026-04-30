@@ -5,4 +5,7 @@
 #include<ctime>
 #include<cstdlib>
 
+void generate_mines(); //для генерации мин
+
+
 #endif //MINES_HPP
