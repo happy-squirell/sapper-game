@@ -10,5 +10,4 @@ void generate_mines(){
     }
 }
 
-
 #endif //MINES_CPP
