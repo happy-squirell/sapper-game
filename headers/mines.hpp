@@ -7,5 +7,4 @@
 
 void generate_mines(); //для генерации мин
 
-
 #endif //MINES_HPP
