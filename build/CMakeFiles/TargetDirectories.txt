@@ -1,0 +1,3 @@
+/home/frost/projects/sapper-game/build/CMakeFiles/main.dir
+/home/frost/projects/sapper-game/build/CMakeFiles/edit_cache.dir
+/home/frost/projects/sapper-game/build/CMakeFiles/rebuild_cache.dir
