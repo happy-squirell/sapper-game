@@ -1,6 +1,8 @@
 #ifndef MINES_HPP
 #define MINES_HPP
 
+#include"common.hpp"
+
 // для рандомной генерации мин
 #include<ctime>
 #include<cstdlib>

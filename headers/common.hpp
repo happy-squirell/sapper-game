@@ -2,6 +2,8 @@
 #define COMMON_HPP
 
 #include<iostream>
+#include<cstdlib>
+#include<unistd.h>
 
 extern char user_visible[19][19]; //видимые пользователем клетки
 extern int mines_pos[19][19]; //фактическое расположение мин

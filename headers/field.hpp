@@ -3,8 +3,7 @@
 
 #include"common.hpp"
 
-int check_box(int x, int y); //проверяет и открывает клетку
+int open_box(int x) //открывает клетку
 void print_field(); //выводит поле
-
 
 #endif //FIELD_HPP
