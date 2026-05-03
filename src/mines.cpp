@@ -1,6 +1,8 @@
 #ifndef MINES_CPP
 #define MINES_CPP
 
+#include"mines.hpp"
+
 void generate_mines(){
     for(int y = 0; i < 20; y++){
         for(int x = 0; x < 20; x++){

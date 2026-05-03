@@ -1,39 +1,27 @@
 #ifndef FIELD_HPP
 #define FIELD_HPP
 
-int check_box(int x, int y){
-    if(mines_pos[x][y] == 0) return 0;
-    else if(mines_pos[x][y] == 1) return 1;
-    else return -1;
-}
+#include"field.hpp"
 
 int open_box(int x, int y){
-    if(check_box(x, y) == 0){
-        user_visible[x][y] = '0';
 
-        if(check_box(x - 1, y) == 0) user_visible[x - 1][y] = '0';
-        else if(check_box(x - 1, y) == 1) user_visible[x - 1][y] = '*';
+    if(mines_pos[x][y] == 0) user_visible[x][y] = '0';
+    else user_visible[x][y] = '*';
 
-        if(check_box(x + 1, y) == 0) user_visible[x + 1][y] = '0';
-        else if(check_box(x + 1, y) == 1) user_visible[x + 1][y] = '*';
+    if(mines_pos[x][y] == 0){
+        for(int ax = -1; ax <= 1; ax++){
+            for(int ay = -1; ay <= 1; ay++){
+                if(ax == 0 && ay == 0) continue;
 
-        if(check_box(x, y - 1) == 0) user_visible[x][y - 1] = '0';
-        else if(check_box(x, y - 1) == 1) user_visible[x][y - 1] = '*';
-
-        if(check_box(x, y + 1) == 0) user_visible[x][y + 1] = '0';
-        else if(check_box(x, y + 1) == 1) user_visible[x][y + 1] = '*';
-
-        return 0;
-    }
-    else{
-        user_visible[x][y] = '*';
-        return 1;
+                open_box(x + ax, y + ay);
+            }
+        }
     }
 }
 
 void print_field(){
-    for(int y = 0; y < 19; y++) {
-        for(int x = 0; x < 19; x++){
+    for(int y = 0; y < 20; y++) {
+        for(int x = 0; x < 20; x++){
             std::cout << user_visible[x][y];
         }
         std::cout << "\n";
