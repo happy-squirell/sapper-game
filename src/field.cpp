@@ -1,9 +1,11 @@
 #ifndef FIELD_HPP
 #define FIELD_HPP
 
-#include"field.hpp"
+#include"../headers/field.hpp"
+#include"../headers/mines.hpp" //только из-за массивов
+#include "iostream"
 
-int open_box(int x, int y){
+void open_box(int x, int y){
 
     if(mines_pos[x][y] == 0) user_visible[x][y] = '0';
     else user_visible[x][y] = '*';

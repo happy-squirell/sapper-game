@@ -1,6 +1,7 @@
-#include"common.hpp"
-#include"mines.hpp"
-#include"field.hpp"
+#include"headers/mines.hpp"
+#include"headers/field.hpp"
+#include<unistd.h>
+#include<iostream>
 
 int main(){
     while(true){
@@ -38,9 +39,8 @@ int main(){
                     if(user_visible[j][i] != '#') counter--;
 
                     if(counter == 0){
-                        std::cout << "ПОздравляем с победой!\n";
+                        std::cout << "Поздравляем с победой!\n";
                         sleep(5);
-                        break;
                     }
                 }
             }
