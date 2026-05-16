@@ -25,11 +25,11 @@ int main(){
             if(mines_pos[x][y] == 1){
                 std::cout << "Вы попали на мину! Игра окончена.\n";
                 sleep(3);
-                system(clear);
+                system("clear");
                 break;
             }
 
-            system(clear);
+            system("clear");
 
             open_box(x, y);
 
