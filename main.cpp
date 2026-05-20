@@ -22,30 +22,9 @@ int main(){
                 break;
             }
 
-            if(mines_pos[x][y] == 1){
-                std::cout << "Вы попали на мину! Игра окончена.\n";
-                sleep(3);
-                system("clear");
-                break;
-            }
-
             system("clear");
 
             open_box(x, y);
-
-            int counter = 400;
-            for(int i = 0; i < 20; i++){
-                for(int j = 0; j < 20; j++){
-                    if(user_visible[j][i] != '#') counter--;
-
-                    if(counter == 0){
-                        std::cout << "Поздравляем с победой!\n";
-                        sleep(5);
-                    }
-                }
-            }
-
-
         }
     }
 }
