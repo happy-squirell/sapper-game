@@ -16,4 +16,25 @@ void generate_mines(){
     }
 }
 
+void endgame_showing(){
+    for (int x = 0; x < 20; x++){
+        for(int y = 0; y < 20; y++){
+            if(mines_pos[x][y] == 1 && user_visible[x][y] == '#') user_visible[x][y] = '*';
+            else if(mines_pos[x][y] == 0 && user_visible[x][y] == '#') user_visible[x][y] = '0';
+        }
+    }
+}
+
+int winner(){
+    int counter = 0;
+    for(int x = 0; x < 20; x++){
+        for (int y = 0; y < 20; y++){
+            if(user_visible[x][y] != '#' && user_visible[x][y] == 0) counter++;
+        }
+    }
+
+    if(counter == 400) return 0;
+    return 1;
+}
+
 #endif //MINES_CPP

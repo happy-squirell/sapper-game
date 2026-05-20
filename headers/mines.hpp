@@ -11,6 +11,8 @@
 extern char user_visible[19][19]; //видимые пользователем клетки
 extern int mines_pos[19][19]; //фактическое расположение мин
 
-void generate_mines(); //для генерации мин
+void generate_mines(); //генерация мин
+void endgame_showing(); // показывает всё после завершения игры
+int winner() // проверяет, открыты ли все клетки
 
 #endif //MINES_HPP
